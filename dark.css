@@ -1,0 +1,29 @@
+/* dark.css */
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
+
+
+body {
+    color: #ffffff;
+  background-color: #000000; /* Hintergrundfarbe für den gesamten Hintergrund */
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent);
+  background-size: 50px 50px; /* Größe des karierten Musters */
+}
+
+
+
+#taskList {
+    /* Hier können Sie Stile für das Element mit der ID #taskList definieren */
+    margin: 10px; /* Beispiel: Außenabstand für #taskList */
+    padding: 5px; /* Beispiel: Innenabstand für #taskList */
+    background-color: #1d1d1d; /* Beispiel: Hintergrundfarbe für #taskList */
+    border: 0px solid #ccc; /* Beispiel: Rahmen um #taskList */
+  
+    /* Dynamische Breite basierend auf der Textlänge plus 50px */
+    display: inline-block; /* Um die Breite an den Inhalt anzupassen */
+    max-width: fit-content; /* Maximale Breite an den Inhalt anpassen */
+    padding-right: 50px; /* Zusätzlicher Platz von 50 Pixeln rechts */
+  }
+  

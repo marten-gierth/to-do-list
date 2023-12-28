@@ -1,0 +1,139 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: large;
+  background-color: #f0f0f0; /* Hintergrundfarbe für den gesamten Hintergrund */
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 76%, transparent 77%, transparent);
+  background-size: 50px 50px; /* Größe des karierten Musters */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+input[type="text"] {
+  width: 200px;
+}
+
+h1#pageTitle {
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-weight: 700;
+    width: min(90%, 500px);
+    max-width: 500px;
+    min-width: 500px;
+  }
+  
+  
+
+#taskList {
+    /* Hier können Sie Stile für das Element mit der ID #taskList definieren */
+    margin: 10px; /* Beispiel: Außenabstand für #taskList */
+    padding: 5px; /* Beispiel: Innenabstand für #taskList */
+    background-color: #ffffff; /* Beispiel: Hintergrundfarbe für #taskList */
+    border: 1px solid #ccc; /* Beispiel: Rahmen um #taskList */
+  
+    /* Dynamische Breite basierend auf der Textlänge plus 50px */
+    display: inline-block; /* Um die Breite an den Inhalt anzupassen */
+    max-width: fit-content; /* Maximale Breite an den Inhalt anpassen */
+    padding-right: 50px; /* Zusätzlicher Platz von 50 Pixeln rechts */
+  }
+  
+
+
+footer {
+  font-family: 'Rubik Scribble', sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.container {
+    margin-left: 15px; /* Verschiebe den Inhalt um 15 Pixel nach links */
+  }
+  
+  #darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #ccc; /* Hintergrundfarbe auf Grau setzen */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* sorgt dafür, dass der Button über anderen Inhalten liegt */
+    border-radius: 50%; /* Runde den Button */
+    width: 40px; /* Breite festlegen */
+    height: 40px; /* Höhe festlegen */
+  }
+  
+  .icon {
+    font-size: 16px; /* Kleineres Icon */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  #lightIcon {
+    display: none;
+  }
+  
+  .dark-mode #darkIcon {
+    display: none;
+  }
+  
+  .dark-mode #lightIcon {
+    display: inline-block;
+  }
+  
+  .buttonContainer {
+    padding: 14px;
+    display: flex; /* Anwendung von Flexbox */
+    align-items: center; /* Zentrieren der Elemente vertikal */
+    gap: 10px; /* Abstand zwischen den Buttons */
+  }
+  
+  .customButton {
+    height: 30px; /* Festlegen einer festen Höhe für die Buttons (zum Beispiel 30px) */
+    padding: 5px 10px; /* Optional: Anpassen des Innenabstands für ein besseres Aussehen */
+    border: 1px solid #000; /* Hinzufügen eines 1 Pixel breiten soliden Rahmens um die Buttons */
+    border-radius: 10px; /* Abrunden der Ecken um 5 Pixel */
+    background: #fff; /* Hintergrundfarbe auf Weiß setzen */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+
+  /* Stile für mobile Geräte */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px; /* Beispiel: Textgröße anpassen */
+  }
+
+  h1#pageTitle {
+    width: 90%; /* Beispiel: Breite des Titels für mobile Geräte anpassen */
+    min-width: unset;
+    font-size: 24px; /* Beispiel: Textgröße für den Titel anpassen */
+  }
+
+
+  /* Neuer Stil für den Mülleimer-Button */
+.deleteTaskButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  display: inline-block;
+}

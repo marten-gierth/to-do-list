@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do-Liste</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link id="pageStyle" rel="stylesheet" type="text/css" href="light.css">
+  <!-- Viewport-Meta-Tag für mobile Ansicht -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+  <div class="container">
+    <h1 id="pageTitle" contentEditable="true" onkeypress="handleTitleEdit(event)">Meine To-Do-Liste</h1>
+    
+    <button class="customButton" onclick="downloadTasks()">&#x2B07;</button>
+    
+    <button class="customButton" onclick="document.getElementById('fileUpload').click()">
+      &#x2B06; Datei auswählen
+    </button>
+    <input type="file" id="fileUpload" accept=".txt" style="display: none;" onchange="uploadTasks(this)">
+    
+    <button class="customButton" id="styleToggle">
+      <span id="darkIcon" class="icon">🌙</span>
+      <span id="lightIcon" class="icon">☀️</span>
+    </button>
+    <button class="customButton" id="pencilButton" onclick="toggleBackgroundColor()">
+      🖊️
+    </button>
+    
+    
+    
+    <br>
+    <br>
+    
+    <input type="text" id="taskInput" placeholder="Neuen Task hinzufügen">
+    <button onclick="addTask()">&rarr;</button>
+    
+    <br>
+    <ul id="taskList">
+      <!-- Die Aufgaben werden hier dynamisch hinzugefügt -->
+    </ul>
+    
+    <footer>
+      <p>&copy; 2023 Marten Gierth </p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
